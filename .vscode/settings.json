@@ -1,0 +1,21 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "javascriptreact": "javascriptreact",
+    "html": "html"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.inlineSuggest.enabled": true,
+  "tailwindCSS.emmetCompletions": true,
+  "css.validate": false,
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.colorDecorators": "always", // 👈 shows color preview
+  "tailwindCSS.hover": true, // 👈 shows CSS meaning on hover
+  "tailwindCSS.suggestions": true // 👈 enables autocomplete even inside JSX
+}
