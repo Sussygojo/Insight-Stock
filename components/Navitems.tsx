@@ -24,7 +24,7 @@ const Navitems = () => {
               isActive(item.href) ? "text-gray-100" : "text-gray-400"
             }`}
           >
-            {item.title}
+            {item.label}
           </Link>
         </li>
       ))}
