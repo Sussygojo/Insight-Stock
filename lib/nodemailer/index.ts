@@ -1,13 +1,10 @@
-import nodemailer from "nodemailer";
-import { WELCOME_EMAIL_TEMPLATE } from "./templates";
+import { Resend } from "resend";
+import {
+  WELCOME_EMAIL_TEMPLATE,
+  NEWS_SUMMARY_EMAIL_TEMPLATE,
+} from "@/lib/nodemailer/templates";
 
-export const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.NODEMAILER_EMAIL,
-    pass: process.env.NODEMAILER_PASSWORD,
-  },
-});
+const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export const sendWelcomeEmail = async ({
   email,
@@ -19,13 +16,40 @@ export const sendWelcomeEmail = async ({
     intro,
   );
 
-  const mailOptions = {
-    from: `"Insight" <insight@example.com>`,
-    to: email,
-    subject: "Welcome to Insight!",
-    text: "Thanks for joingin Insight",
+  const res = await resend.emails.send({
+    from: `"Insight" <onboarding@resend.dev>`,
+    to: "nikhilmanjunm@gmail.com",
+    subject: `Welcome to Insight - your stock market toolkit is ready!`,
+    text: "Thanks for joining Insight",
     html: htmlTemplate,
-  };
+  });
+  if (res.error) {
+    console.log("Resend Error: ", res.error);
+  }
+};
 
-  await transporter.sendMail(mailOptions);
+export const sendNewsSummaryEmail = async ({
+  email,
+  date,
+  newsContent,
+}: {
+  email: string;
+  date: string;
+  newsContent: string;
+}): Promise<void> => {
+  const htmlTemplate = NEWS_SUMMARY_EMAIL_TEMPLATE.replace(
+    "{{date}}",
+    date,
+  ).replace("{{newsContent}}", newsContent);
+
+  const res = await resend.emails.send({
+    from: `"Insight News" <onboarding@resend.dev>`,
+    to: "nikhilmanjunm@gmail.com",
+    subject: `📈 Market News Summary Today - ${date}`,
+    text: `Today's market news summary from Insight`,
+    html: htmlTemplate,
+  });
+  if (res.error) {
+    console.log("Resend Error: ", res.error);
+  }
 };
