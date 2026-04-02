@@ -13,8 +13,15 @@ import { useRouter } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { LogOut } from "lucide-react";
 import { signOut } from "@/lib/actions/auth.actions";
+import NavItems from "./Navitems";
 
-const UserDropdown = ({ user }: { user: User }) => {
+const UserDropdown = ({
+  user,
+  initialStocks,
+}: {
+  user: User;
+  initialStocks: StockWithWatchlistStatus[];
+}) => {
   //
   const router = useRouter();
   const handleSignOut = async () => {
@@ -66,7 +73,10 @@ const UserDropdown = ({ user }: { user: User }) => {
           <LogOut className="h-4 w-4 mr-2 hidden sm:block" />
           Logout
         </DropdownMenuItem>
-        <DropdownMenuSeparator />
+        <DropdownMenuSeparator className="hidden sm:block bg-gray-600" />
+        <nav className="sm:hidden">
+          <NavItems initialStocks={initialStocks} />
+        </nav>
       </DropdownMenuContent>
     </DropdownMenu>
   );
