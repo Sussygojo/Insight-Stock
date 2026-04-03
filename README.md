@@ -103,9 +103,4 @@ This project is built for educational purposes and is based on a guided tutorial
 
 ## 👤 Author
 
-**Nikhil M**
-
-* GitHub: https://github.com/your-username
-* LinkedIn: https://linkedin.com/in/your-profile
-
----
+**SussyGojo M**
