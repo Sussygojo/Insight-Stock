@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📈 Signalist – Stock Analysis Dashboard
 
-## Getting Started
+Signalist is a responsive stock market dashboard that allows users to explore stock data, visualize trends, and gain insights into company performance through an intuitive interface.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+* 📊 **Interactive Charts**
+  Visualize stock performance using line and candlestick charts with historical data
+
+* 🔍 **Search & Discovery**
+  Quickly find stocks using an efficient search and filtering system
+
+* 🏢 **Company Insights**
+  View key financial metrics such as PE ratio, EPS, revenue, and related market data
+
+* 🎯 **Filtering Options**
+  Filter stocks based on industry, performance, or other criteria
+
+* ⚡ **Responsive UI**
+  Clean and modern interface optimized for different screen sizes
+
+* 🧩 **Modular Architecture**
+  Built with reusable components for scalability and maintainability
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend**
+
+* React
+* Next.js
+* TypeScript
+* Tailwind CSS
+
+**Backend (if applicable)**
+
+* Node.js
+* Express.js
+
+**Tools & Libraries**
+
+* TradingView Widgets
+* Postman
+* Git & GitHub
+
+---
+
+## 📂 Project Structure
+
+```
+/components     → Reusable UI components  
+/pages or /app  → Routing and main pages  
+/lib            → Utility functions and configs  
+/public         → Static assets  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/signalist.git
 
-## Learn More
+# Navigate to project folder
+cd signalist
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run the development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧠 What I Learned
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Building scalable frontend applications using component-based architecture
+* Integrating third-party widgets and APIs for real-time data visualization
+* Managing state and optimizing performance in React applications
+* Structuring projects for maintainability and readability
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🔮 Future Improvements
+
+* Add user authentication
+* Implement persistent watchlist
+* Enhance filtering and analytics features
+* Improve UI/UX and add dark mode
+
+---
+
+## 📌 Disclaimer
+
+This project is built for educational purposes and is based on a guided tutorial. Additional improvements and customizations have been implemented to enhance functionality and understanding.
+
+---
+
+## 👤 Author
+
+**Nikhil M**
+
+* GitHub: https://github.com/your-username
+* LinkedIn: https://linkedin.com/in/your-profile
+
+---
