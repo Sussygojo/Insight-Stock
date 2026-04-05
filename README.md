@@ -103,4 +103,4 @@ This project is built for educational purposes and is based on a guided tutorial
 
 ## 👤 Author
 
-**SussyGojo M**
+**SussyGojo **
